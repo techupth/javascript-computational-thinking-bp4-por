@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+function totalSales(arrayObject) {
+  let totalOrderPrices = 0;
+
+  for (let i of arrayObject) {
+    totalOrderPrices += i.productPrice*i.productQuantity;
+    //console.log(totalOrderPrices);
+  };
+  return console.log("Total-order-prices : " + totalOrderPrices + " Baht")
+}
+
+totalSales(orders);

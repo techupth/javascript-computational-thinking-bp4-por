@@ -82,3 +82,36 @@ let orders = [
 ];
 
 // Start coding here
+
+/*find the most sell products
+1. create function -- If wanna use it later
+2. access each object using loop -- using for-in loop to access object
+3. using condition to help finding the most sell proeuct = productPrice * productQuantity
+  3.1 find the value -> start with 0 (min) then compare and replace with the higher sales
+  3.2 compare the current value and save value
+4. return result of function as log*/
+
+/* for (let i in orders) {
+  let sales = 0;
+  if (sales < orders[i].productPrice * orders[i].productQuantity) {
+    sales = orders[i].productPrice * orders[i].productQuantity;
+    console.log(sales);
+  };
+}; */
+
+//console.log(orders[1].productPrice * orders[1].productQuantity)
+
+function calculateSale(arrayObject) {
+  let sales = 0; 
+  let salesObject = null; //object
+
+  for (let i of arrayObject) {
+    if (sales <= i.productPrice * i.productQuantity) {
+      sales = i.productPrice * i.productQuantity; // re-assign highest value for each iteration
+      salesObject = i; //assign the highest iteration to use for point out the object 
+    };
+  }
+  return console.log(salesObject);
+}
+
+calculateSale(orders);
