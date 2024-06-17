@@ -82,3 +82,17 @@ let orders = [
 ];
 
 // Start coding here
+/* find total that pay with "jcb"
+1. access object and only calcualte when met the condition (pay with "jcb") and accumulate
+2. show all object that meet criteria
+*/
+function creditType(arrayObject) {
+  for (let i of arrayObject) {
+  
+  if (i.creditCardType === "jcb") {
+    console.log(i);
+  };
+};
+}
+
+creditType(orders);

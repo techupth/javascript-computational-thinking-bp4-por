@@ -82,3 +82,24 @@ let orders = [
 ];
 
 // Start coding here
+/*Finding how much "customerName" spent (in the same code with ex-1 ???)
+1. pin point that customer's object
+2. doing calculate on total spent
+3. result as console.log("...")
+*/
+
+function customerTotalSpent(arrayObject, customerName) {
+  let totalSpent = 0;
+  let userObject = null;
+
+  for (let i of arrayObject) {
+    if (i.customerName === customerName) {
+      totalSpent = i.productPrice * i.productQuantity;
+      //console.log(i);
+      userObject= i;
+    }
+  }; 
+  return console.log(`Total paid amout of ${customerName}: ${totalSpent} Baht`);
+}
+
+customerTotalSpent(orders, "Birdie Shepland");
